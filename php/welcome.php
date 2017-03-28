@@ -1,6 +1,6 @@
 <!doctype html>
 	<head>
-		<title>Welcome</title>
+		<title>Welcome to Quiz 2</title>
 		<meta name "viewport" content="width=device-width, initial-scale=1">
 		<meta charset="uft-8">
 		<link rel="stylesheet" href="../css/register.css">
