@@ -1,20 +1,3 @@
-<?php
-
-if (isset($_POST['fname'])) {
-	$fname=$_POST['fname'];
-	echo "Hi, $fname , ";
-}
-
-if (isset($_POST['lname'])) {
-	$lname=$_POST['lname'];
-}
-
-if (isset($_POST['email'])) {
-	$email=$_POST['email'];
-	echo "you recently signed up with the email address: $email , thank you!";
-}
-?>
-
 <!doctype html>
 	<head>
 		<title>Welcome</title>
@@ -26,7 +9,7 @@ if (isset($_POST['email'])) {
 	<body>
 		<h1>Join my mailing list to learn more about the Pittsburgh Steelers!</h1>
 			<div class="contact">
-				<form action = "welcome.php" class="contact" name="form" method="post">
+				<form action = "register.php" class="contact" name="form" method="post">
 					<label for="fname">First Name</label><br>
 						<input class="text" name="fname" id="fname" type="text"/>
 							<br><br>
@@ -42,5 +25,12 @@ if (isset($_POST['email'])) {
 					<input class="submit" name="submit" type="submit" value="Submit"/>
 				</form>
 			</div>
-		</body>
+			
+	<?php
+		if(isset($_COOKIE['fname']) && isset($_COOKIE['email']))
+		{
+			echo "<p>Hello, " . $_COOKIE['fname'] . ", you recently signed up with the email address: " . $_COOKIE['email'] . "</p>";
+		}
+	?>
+	</body>
 </html>
